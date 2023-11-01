@@ -1,5 +1,14 @@
 # Maven target directory
+.classpath
+**/.classpath
+.project
+**/.project
+.settings/
 target/
+*/target/*
+*/target/**
+**/target/**
+**/META_INF/
 
 # IDE files
 .idea/
@@ -25,7 +34,3 @@ logs/
 # OS-specific files
 .DS_Store
 Thumbs.db
-
-.project
-.settings/
-
