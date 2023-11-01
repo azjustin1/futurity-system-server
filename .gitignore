@@ -1,16 +1,14 @@
 # Maven target directory
-.classpath
 **/.classpath
-.project
 **/.project
-.settings/
-pom.properties
+**/.settings/
 **/pom.properties
 target/
 */target/*
 */target/**
 **/target/**
 **/META_INF/
+**/bin/
 
 # IDE files
 .idea/
