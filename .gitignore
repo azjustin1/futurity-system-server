@@ -1,0 +1,31 @@
+# Maven target directory
+target/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Compiled Java bytecode
+*.class
+
+# Generated files
+src/main/generated/
+src/main/resources/generated/
+
+# Logs
+logs/
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+.project
+.settings/
+
