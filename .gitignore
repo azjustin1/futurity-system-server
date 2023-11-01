@@ -4,6 +4,8 @@
 .project
 **/.project
 .settings/
+pom.properties
+**/pom.properties
 target/
 */target/*
 */target/**
