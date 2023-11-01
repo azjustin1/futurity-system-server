@@ -1,0 +1,38 @@
+# Maven target directory
+.classpath
+**/.classpath
+.project
+**/.project
+.settings/
+pom.properties
+**/pom.properties
+target/
+*/target/*
+*/target/**
+**/target/**
+**/META_INF/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Compiled Java bytecode
+*.class
+
+# Generated files
+src/main/generated/
+src/main/resources/generated/
+
+# Logs
+logs/
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# OS-specific files
+.DS_Store
+Thumbs.db
