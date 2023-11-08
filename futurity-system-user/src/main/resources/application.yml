@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   datasource:
@@ -32,3 +32,10 @@ rabbitmq:
   max:
     concurrent:
       consumers: 1
+  
+
+amqp:
+  rabbitmq:
+    queue: user-queue
+    exchange: exchange
+    routingkey: routingkey

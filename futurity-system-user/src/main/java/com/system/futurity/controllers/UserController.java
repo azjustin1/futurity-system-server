@@ -1,4 +1,4 @@
-package com.system.futurity.api.modules.users;
+package com.system.futurity.controllers;
 
 import java.util.List;
 
@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.system.futurity.data.modules.users.UserDTO;
-import com.system.futurity.data.modules.users.UserEntity;
+import com.system.futurity.dtos.UserDTO;
+import com.system.futurity.services.UserService;
+import com.system.futurity.users.UserEntity;
 
 @RestController
 @RequestMapping("rest/users")
-public class UserRest {
-
+public class UserController {
   @Autowired
   private UserService userService;
 

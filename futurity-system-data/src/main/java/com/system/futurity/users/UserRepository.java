@@ -1,4 +1,4 @@
-package com.system.futurity.data.modules.users;
+package com.system.futurity.users;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

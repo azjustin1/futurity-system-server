@@ -1,4 +1,4 @@
-package com.system.futurity.data.modules.users;
+package com.system.futurity.dtos;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package com.system.futurity.api.modules.users;
+package com.system.futurity.services;
 
 import java.util.List;
 
@@ -7,13 +7,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.system.futurity.data.modules.users.UserDTO;
-import com.system.futurity.data.modules.users.UserEntity;
-import com.system.futurity.data.modules.users.UserRepository;
+import com.system.futurity.dtos.UserDTO;
+import com.system.futurity.users.UserEntity;
+import com.system.futurity.users.UserRepository;
 
 @Service
 public class UserService {
-
   @Autowired
   private UserRepository userRepository;
 

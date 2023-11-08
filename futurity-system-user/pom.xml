@@ -7,5 +7,6 @@
         <artifactId>futurity-system-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>futurity-system-api</artifactId>
+
+    <artifactId>futurity-system-user</artifactId>
 </project>
