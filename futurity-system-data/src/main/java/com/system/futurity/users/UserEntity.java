@@ -1,6 +1,8 @@
 package com.system.futurity.users;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -36,7 +38,7 @@ public class UserEntity {
   private String userName;
 
   @Column
-  private LocalDate dateOfBirth;
+  private Instant dateOfBirth;
 
   @Column
   private String phone;

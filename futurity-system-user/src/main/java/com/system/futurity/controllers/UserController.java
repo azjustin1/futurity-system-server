@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.system.futurity.dtos.UserDTO;
 import com.system.futurity.services.UserService;
+import com.system.futurity.users.UserDTO;
 import com.system.futurity.users.UserEntity;
 
 @RestController

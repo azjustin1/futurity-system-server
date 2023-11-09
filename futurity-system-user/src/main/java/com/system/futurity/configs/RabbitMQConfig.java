@@ -93,11 +93,10 @@ public class RabbitMQConfig {
   @Bean
   public AmqpTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
     final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-    rabbitTemplate.setDefaultReceiveQueue(queueName);
     rabbitTemplate.setMessageConverter(jsonMessageConverter());
-    rabbitTemplate.setReplyAddress(queue().getName());
     rabbitTemplate.setReplyTimeout(replyTimeout);
     rabbitTemplate.setUseDirectReplyToContainer(false);
+    rabbitTemplate.setReplyAddress(exchange);
     return rabbitTemplate;
   }
 

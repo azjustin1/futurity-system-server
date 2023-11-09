@@ -21,10 +21,10 @@ rabbitmq:
   port: 15672
   username: admin
   password: admin
-  exchange: rabbitmq.exchange
-  queue: rabbitmq.queue.user
+  exchange: futurity-exchange
+  queue: futurity-queue
   routing:
-   key: rabbitmq.routingkey
+   key: create-user-response
   reply:
     timeout: 60000
   concurrent:
@@ -32,3 +32,7 @@ rabbitmq:
   max:
     concurrent:
       consumers: 1
+
+queues:
+  create-user-request: create-user-request
+  create-user-response: create-user-response

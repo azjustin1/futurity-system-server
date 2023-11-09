@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.system.futurity.dtos.UserDTO;
+import com.system.futurity.users.UserDTO;
 import com.system.futurity.users.UserEntity;
 import com.system.futurity.users.UserRepository;
 

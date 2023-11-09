@@ -11,8 +11,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = { RabbitAutoConfiguration.class })
 @ComponentScan(basePackages = "com.system.futurity")
-@EnableJpaRepositories(basePackages = { "com.system.futurity.users" })
-@EntityScan(basePackages = { "com.system.futurity.users" })
+@EnableJpaRepositories(basePackages = { "com.system.futurity" })
+@EntityScan(basePackages = { "com.system.futurity" })
 public class FuturitySystemUserApplication {
 
   public static void main(String[] args) {
