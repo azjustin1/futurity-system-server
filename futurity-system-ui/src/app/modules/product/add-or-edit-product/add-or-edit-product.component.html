@@ -1,0 +1,63 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <h1 mat-dialog-title>Add new product</h1>
+  <div mat-dialog-content align="center">
+    <mat-form-field class="form-field">
+      <mat-label>Name</mat-label>
+      <input matInput matNativeControl formControlName="name" />
+      <mat-error
+        *ngIf="
+          productForm.get('name')!.invalid &&
+          (productForm.get('name')!.dirty || productForm.get('name')!.touched)
+        "
+      >
+        <span *ngIf="productForm.get('name')!.errors?.['required']">
+          Name is required.
+        </span>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <mat-label>Description</mat-label>
+      <input matInput matNativeControl formControlName="description" />
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <mat-label>Price</mat-label>
+      <input type="number" matNativeControl formControlName="price" />
+      <mat-error
+        *ngIf="
+          productForm.get('price')!.invalid &&
+          (productForm.get('price')!.dirty || productForm.get('price')!.touched)
+        "
+      >
+        <span *ngIf="productForm.get('price')!.errors?.['required']">
+          Price is required.
+        </span>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <mat-label>Quantity</mat-label>
+      <input
+        type="number"
+        matNativeControl
+        matInput
+        formControlName="quantity"
+      />
+      <mat-error
+        *ngIf="
+          productForm.get('quantity')!.invalid &&
+          (productForm.get('quantity')!.dirty ||
+            productForm.get('quantity')!.touched)
+        "
+      >
+        <span *ngIf="productForm.get('quantity')!.errors?.['required']">
+          Quantity is required.
+        </span>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button type="submit">
+      {{ actionText }}
+    </button>
+  </div>
+</form>
