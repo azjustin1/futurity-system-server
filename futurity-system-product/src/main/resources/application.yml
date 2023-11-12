@@ -22,7 +22,7 @@ rabbitmq:
   username: admin
   password: admin
   exchange: futurity-exchange
-  queue: futurity-system-queue
+  queue: futurity-queue
   routing:
    key: product-queue
   reply:
