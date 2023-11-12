@@ -1,6 +1,5 @@
 package com.system.futurity.application;
 
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,5 +18,4 @@ public class FuturitySystemProductApplication {
   public static void main(String[] args) {
     SpringApplication.run(FuturitySystemProductApplication.class, args);
   }
-
 }

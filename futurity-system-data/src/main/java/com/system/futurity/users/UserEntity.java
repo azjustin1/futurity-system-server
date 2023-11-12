@@ -1,7 +1,6 @@
 package com.system.futurity.users;
 
-import java.time.Instant;
-import java.time.LocalDate;
+import java.io.Serializable;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -26,7 +25,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
-public class UserEntity {
+public class UserEntity implements Serializable {
+  private static final long serialVersionUID = 11237129837213L;
+
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
@@ -38,7 +39,7 @@ public class UserEntity {
   private String userName;
 
   @Column
-  private Instant dateOfBirth;
+  private Date dateOfBirth;
 
   @Column
   private String phone;

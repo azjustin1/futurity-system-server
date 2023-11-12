@@ -18,5 +18,6 @@ import lombok.Setter;
 public class RequestMessage<T> implements Serializable {
   private static final long serialVersionUID = 12348273982323432L;
   private Command command;
-  T payload;
+  private String filter;
+  private T payload;
 }

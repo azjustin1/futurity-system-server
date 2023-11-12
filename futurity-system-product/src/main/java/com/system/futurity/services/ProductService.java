@@ -47,7 +47,7 @@ public class ProductService {
     return productRepository.save(existedProduct);
   }
 
-  public boolean delete(Long productId, ProductDTO productDTO) {
+  public boolean delete(Long productId) {
     ProductEntity existedProduct = productRepository.findById(productId)
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found"));
     try {

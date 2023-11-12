@@ -1,10 +1,7 @@
 package com.system.futurity.users;
 
 import java.io.Serializable;
-import java.time.Instant;
-import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -19,6 +16,7 @@ import lombok.Setter;
 @Setter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @JsonInclude(Include.NON_NULL)
 public class UserDTO implements Serializable {
   private static final long serialVersionUID = 112398129387L;
@@ -33,18 +31,8 @@ public class UserDTO implements Serializable {
   private String fullName;
 
   @JsonProperty("dateOfBirth")
-  @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-  private Instant dateOfBirth;
+  private Long dateOfBirth;
 
   @JsonProperty("phone")
   private String phone;
-
-  public UserDTO() {
-  }
-
-  public UserDTO(String userName, String fullName, Instant dateOfBirth) {
-    this.userName = userName;
-    this.fullName = fullName;
-    this.dateOfBirth = dateOfBirth;
-  }
 }

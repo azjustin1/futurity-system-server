@@ -1,11 +1,13 @@
 package com.system.futurity.configs;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
@@ -22,9 +24,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.util.ErrorHandler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @EnableRabbit
 @Configuration
@@ -65,12 +64,12 @@ public class RabbitMQConfig {
   }
 
   @Bean
-  public DirectExchange exchange() {
-    return new DirectExchange(exchange);
+  public TopicExchange exchange() {
+    return new TopicExchange(exchange);
   }
 
   @Bean
-  public Binding binding(Queue queue, DirectExchange exchange) {
+  public Binding binding(Queue queue, TopicExchange exchange) {
     return BindingBuilder.bind(queue).to(exchange).with(routingkey);
   }
 

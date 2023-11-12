@@ -8,10 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.system.futurity.common.IFuturityConsumer;
-import com.system.futurity.messaging.RequestMessage;
 import com.system.futurity.products.CreateProductMessage;
 import com.system.futurity.products.DeleteProductMessage;
-import com.system.futurity.products.ProductDTO;
 import com.system.futurity.products.ProductEntity;
 import com.system.futurity.products.ReadProductMessage;
 import com.system.futurity.products.UpdateProductMessage;
@@ -42,6 +40,6 @@ public class ProductConsumer implements
 
   @RabbitHandler
   public Boolean delete(DeleteProductMessage request) {
-    return productService.delete(request.getProductId(), request.getPayload());
+    return productService.delete(request.getProductId());
   }
 }
