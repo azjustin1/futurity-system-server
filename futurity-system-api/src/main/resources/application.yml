@@ -6,7 +6,7 @@ spring:
     url: jdbc:mysql://localhost:3306/futurity
     username: root
     password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
@@ -14,6 +14,12 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+  rabbitmq:
+    host: 127.0.0.1
+    port: 15672
+    username: guest
+    password: guest
+    virtualhost: "/"
 
 rabbitmq:
   host: localhost
@@ -22,17 +28,17 @@ rabbitmq:
   username: admin
   password: admin
   exchange: futurity-exchange
-  queue: futurity-queue
+  queue: api-queue
   routing:
-   key: create-user-response
+   key: api-queue
   reply:
     timeout: 60000
   concurrent:
-    consumers: 1
+    consumers: 5
   max:
     concurrent:
-      consumers: 1
+      consumers: 5
 
 queues:
-  create-user-request: create-user-request
-  create-user-response: create-user-response
+  user: user-queue
+  product: product-queue
